@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Image Gallery Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- install fontsome CDN before using -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- ALWAYS insert custom style sheets AFTER bootstrap stylesheets to overwrite its css -->
+	<style type="text/css">
+		body {
+			padding-top: 70px;
+			/* this creates a little white space between the navbar and the actual content, because bootstrap navbar is 50px by default */
+		}
+		.navbar-inverse {
+			background: #2c3e50;
+		}
+		.jumbotron {
+			color: #2c3e50;
+			background: #ecf0f1;
+		}
+
+		/* a {color: white} won't work because it isn't specific enough. Inspect element and copy bootstrap's more specific selector and change to your own styles */
+		/* same for navbar-brand */
+		.navbar-inverse .navbar-nav>li>a,
+		.navbar-inverse .navbar-brand {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- copied from navbar.html -->
+	<!-- instead of navbar-default, we can use navbar-inverse -->
+	<!-- navbar-inverse makes the navbar light text on dark background -->
+	<!-- navbar-fixed-top will make a sticky navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-hamburger-demo" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <!-- find glyphicons in getbootstrap.com components -->
+	      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> KARY IMGS</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-hamburger-demo">	    
+		    <!-- you need the nav class to create nav bar items -->
+		    <!-- these are floating left -->
+		    <!-- works just fine with div, but using ul makes more sense -->
+		    <ul class="nav navbar-nav">
+		    	<li><a href="#">About</a></li>
+		    	<li><a href="#">Contact</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><a href="#">Sign Up</a></li>
+		    	<li><a href="#">Login</a></li>
+		    </ul>
+		  </div>
+    </div>
+	</nav>
+
+
+	<div class="container">
+
+		<div class="jumbotron">
+			<!-- fontawesome icon -->
+			<!-- you can change color or font-size -->
+			<h1><i class="fa fa-camera-retro" aria-hidden="true"></i> The Image Gallery</h1>
+			<p>So many beautiful pictures</p>
+		</div>
+
+		<!-- only need ONE row even though each div takes 4 units, bootstrap will automatically wrap the divs to the next row -->
+		<div class="row">
+			<!-- get free high resolution images from unsplash.com -->
+			<!-- use images with SAME dimension to avoid weird layout -->
+			<div class="col-lg-4 col-sm-6">
+				<!-- MUST use bootstrap class thumbnail to keep the image inside the column -->
+				<div class="thumbnail">
+					<!-- 	MUST add the alphanumeric combination that comes after ?photo= to https://source.unsplash.com/ to work -->
+					<img src="https://source.unsplash.com/71vAb1FXB6g">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/DlkF4-dbCOU">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/YwFHhIgG77M">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/LuK-MuZ-yf0">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/2FdIvx7sy3U">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/_CFv3bntQlQ">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/a8K-puaPyVk">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/s4dfrh7hdDU">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="https://source.unsplash.com/uOi3lg8fGl4">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
